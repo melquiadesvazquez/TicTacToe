@@ -1,9 +1,31 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const App = () => {
+import { withStyles } from '@material-ui/core/styles';
+
+import Game from './containers/Game.jsx';
+
+const styles = (theme) => ({
+  content: {
+    // take into account the app/toolbar
+    paddingTop: theme.mixins.toolbar.minHeight + 10
+  }
+});
+
+const App = ({ classes }) => {
   return (
-    <h2>Hello Tic Tac Toe!</h2>
+    <div>
+      <div className={classes.content}>
+        <section>
+          <Game />
+        </section>
+      </div>
+    </div>
   );
 };
 
-export default App;
+App.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(App);
