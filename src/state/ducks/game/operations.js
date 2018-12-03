@@ -1,5 +1,3 @@
-// game/operations.js
-
 /*
   Our operations are simple.  We can just forward the actions one for one.  Later on,
   if we have more complex operations that require dispatching multiple actions, we can

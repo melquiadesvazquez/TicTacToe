@@ -1,32 +1,30 @@
 // views/App.jsx
 
-import React from 'react';
-import PropTypes from 'prop-types';
+// import statements
+// ...
+// ...
 
-import { withStyles } from '@material-ui/core/styles';
+// Add the title bar
+import TitleBar from './containers/TitleBar.jsx';
 
-import Game from './containers/Game.jsx';
-
-const styles = (theme) => ({
-  content: {
-    // take into account the app/toolbar
-    paddingTop: theme.mixins.toolbar.minHeight + 10
-  }
-});
+// Game component and styles object
+// ...
+// ..
 
 const App = ({ classes }) => {
   return (
     <div>
       <div>
         <header>
-          <h2>Tic Tac Toe - Appbar/menu here...</h2>
+          {/* replace the old header text with the title bar */}
+          <TitleBar />
         </header>
       </div>
-      <div className={classes.content}>
-        <section>
-          <Game />
-        </section>
-      </div>
+      { /*
+          rest of the App content
+          ...
+          ...
+      */ }
     </div>
   );
 };
